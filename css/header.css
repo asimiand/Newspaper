@@ -12,27 +12,40 @@ header{
     border-bottom-color: #e8491d;
     border-bottom-width: 3px;
     border-bottom-style: solid;   
+    
+}
+
+header h1{
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 header a{
     color:#ffffff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
+}
+
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+header #branding h1{
+    margin: 0;
+    
 }
 
 /* Cada li tiene su propia cajita*/
 header li{
     display: inline-flex;
-    padding: 0 20px 0 20px;
-}
-
-header #branding h1{
-    margin: 0;
+    padding: 0 40px 10px 40px;
 }
 
 header nav{
-    margin-top: 10px;    
+    margin-top: 10px; 
+    margin-left: 100px;   
 }
 
 header .highlight, header .current a{
@@ -40,8 +53,3 @@ header .highlight, header .current a{
     font-weight: bold;
 }
 
-/* esto porque el header tiene un solo link adentro*/
-header a:hover{
-    color: #cccccc;
-    font-weight: bold;
-}
