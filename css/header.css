@@ -1,0 +1,47 @@
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header{
+    background-color: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px; /*when the screen is smaller, we want the height to adjust*/
+    border-bottom-color: #e8491d;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;   
+}
+
+header a{
+    color:#ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/* Cada li tiene su propia cajita*/
+header li{
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding h1{
+    margin: 0;
+}
+
+header nav{
+    margin-top: 10px;    
+}
+
+header .highlight, header .current a{
+    color: #e8491d;
+    font-weight: bold;
+}
+
+/* esto porque el header tiene un solo link adentro*/
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
