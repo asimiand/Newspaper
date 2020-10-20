@@ -25,6 +25,17 @@ section .box .smallBox{
     align-items: center;
 }
 
+section a{
+    text-decoration: none;
+    color: #333333 ;
+}
+
+section a:hover{
+    color: #aaaaaa;
+    font-weight: inherit;
+}
+
+
 /* Media Queries */
 @media(max-width: 769px){
     section {

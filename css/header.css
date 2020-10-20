@@ -1,7 +1,7 @@
 header{
     background-color: #333333;
     color: #ffffff;
-    padding-top: 30px;
+    padding-top: 20px;
     border-bottom-color: #ffffff;
     border-bottom-width: 3px;
     border-bottom-style: solid;  
@@ -46,10 +46,10 @@ header nav ul{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 10px; 
+    padding-top: 20px; 
     padding-right: 50px; 
     border-top-color: #ffffff;
-    border-top-width: 3px;
+    border-top-width: 1.5px;
     border-top-style: solid;
 }
 
@@ -70,6 +70,12 @@ header img{
     width: 20px;
 }
 
+header date{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    margin-left: 35px;
+}
+
 
 /* Media Queries */
 @media(max-width: 768px){
@@ -86,6 +92,10 @@ header img{
 
     header img{
         width: 10px;
+    }
+
+    header date{
+        font-size: 10px;
     }
 }
 
