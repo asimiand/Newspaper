@@ -1,23 +1,17 @@
-header ul{
-    margin: 0;
-    padding: 0;
-}
-
-/* Header */
 header{
-    background-color: #35424a;
+    background-color: #808080;
     color: #ffffff;
     padding-top: 30px;
-    min-height: 70px; /*when the screen is smaller, we want the height to adjust*/
-    border-bottom-color: #e8491d;
+    border-bottom-color: #006600;
     border-bottom-width: 3px;
-    border-bottom-style: solid;   
-    
+    border-bottom-style: solid;  
 }
 
-header h1{
-    text-align: center;
-    padding-bottom: 10px;
+header .branding{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header a{
@@ -33,26 +27,34 @@ header a:hover{
 }
 
 header .branding h1{
-    margin: 0;
-    
+    margin: 0;    
 }
 
-/* Cada li tiene su propia cajita*/
+header .branding button{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 header li{
-    display: inline-flex;
-    padding: 0 40px 10px 40px;
+    display: flex;    
 }
 
-header nav{
-    margin-top: 10px; 
-    margin-left: 100px;   
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px; 
+    padding-right: 50px; 
+    border-top-color: #006600;
+    border-top-width: 3px;
+    border-top-style: solid;
 }
 
-header .highlight, header .current a{
-    color: #e8491d;
+header .highlight{
+    color: #006600;
     font-weight: bold;
 }
 
-header .branding{
-    display: inline-flex;
+header img{
+    width: 20px;
 }
