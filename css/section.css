@@ -127,7 +127,7 @@ section a:hover{
         flex-direction: column;
     }
 
-    section .smallBox{
+    section .secondary .smallBox{
         border-bottom-color: #ffffff;
         border-bottom-width: 3px;
         border-bottom-style: solid;
