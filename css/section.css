@@ -1,21 +1,21 @@
 section {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 20px;
     margin-left: 150px;
     margin-right: 150px;
+
 }
 
 section .box{
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     padding: 10px;    
 }
 
 section .box img{
-    width: 300px;
+    width: 350px;
 }
 
 section .box .smallBox{
