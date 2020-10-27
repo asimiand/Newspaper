@@ -10,11 +10,8 @@ section {
 
 /*------------*/
 section .main img{
-    width: 300px;
-}
-
-section .main .main1 img{
-    width: 600px;
+    width: 100%;
+    height: auto;
 }
 
 /*------------*/
@@ -61,7 +58,8 @@ section .secondary .smallBox{
 }
 
 section .secondary .smallBox img{
-    width: 200px;
+    width: 100%;
+    height: auto;
 
 }
 
@@ -137,10 +135,6 @@ section a:hover{
         border-bottom-width: 1px;
         border-bottom-color: #999999;
         border-bottom-style: solid
-    }
-
-    section .secondary .smallBox img{
-        width: 100px;
     }
 }
 
