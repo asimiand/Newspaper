@@ -27,7 +27,7 @@ header a:hover{
 }
 
 header .branding h1{
-    font-size: 50px;
+    font-size: 5vw;
     margin: 0;
     font-style: italic;
     font-weight: lighter;
@@ -55,7 +55,7 @@ header nav ul{
 
 header .highlight a{
     font-family: Helvetica Neue;
-    font-size: 48px;
+    font-size: 5vw;
     font-style: normal;
     color: #ffffff;
     font-weight: lighter;
@@ -79,13 +79,7 @@ header date{
 
 /* Media Queries */
 @media(max-width: 768px){
-    header .branding h1{
-      font-size: 28px;
-    }
 
-    header .highlight a{
-        font-size: 30px;
-    }
     header nav ul{
         display: none;
     }
@@ -100,13 +94,7 @@ header date{
 }
 
 @media(max-width: 480px){
-    header .branding h1{
-      font-size: 18px;
-    }
 
-    header .highlight a{
-        font-size: 18px;
-    }
     
     header img{
         width: 5px;
