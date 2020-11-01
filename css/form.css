@@ -1,0 +1,36 @@
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px; 
+}
+
+
+.subscribe .form{
+    display: flex;
+
+}
+
+.subscribe .form .form-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px;
+
+}
+
+.subscribe .form .form-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.subscribe .send-button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }

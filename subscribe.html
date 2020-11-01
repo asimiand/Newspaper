@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--importante en una responsive poner el viewport para poner el widht del template-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--device - width so whatever device we are on, mobile, tablet, we are gonna set it to that width-->
+    <meta name= "description" content="Newspaper">
+    <meta name="keywords" content="science, news, space, physics">
+    <meta name="author" content="Adriana Simiand">
+    <title>Marie Curie News</title>
+    <link rel="stylesheet" href="./css/body.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/section.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/form.css">
+
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <header>
+            <div class="branding">
+                <button><img src="./img/hamburguesa.png"></button>
+                <h1><span class="highlight"><a href="index.html">Marie Curie </a></span>news</h1>
+                <button>Subscribe</button>
+            </div>
+            <date>Tuesday, October 20, 2020 </date>
+            <nav>
+                <ul>
+                    <li><a href="alltopics.html">All Topics</a></li>
+                    <li><a href="life.html">Life</a></li>
+                    <li><a href="humans.html">Humans</a></li>
+                    <li><a href="space.html">Space</a></li>
+                    <li><a href="earth.html">Earth</a></li>
+                    <li><a href="physics.html">Physics</a></li>
+                    <li><a href="maths.html">Maths</a></li>
+                    <li><a href="coronavirus.html">Coronavirus</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<div class="subscribe">
+    <form action="registro" method="get">
+        <div class="form">
+            <div class=" form-left">
+                <p>Full name: <input class="controls" type="text" id="name" size="40" placeholder="Ex: Tia Toomey"></p>
+                <p>Email: <input class="controls" type="text" id="email" size="40" placeholder="Ex: tia.toomey@gmail.com"></p>
+                <p>Password: <input class="controls" type="password" id="password" size="12" placeholder="Password"></p>
+                <p>Repeate password: <input class="controls" type="password" id="password2" placeholder="Repeat Password"></p>
+                <p>Age: <input class="controls" type="number" id="age" min="18" placeholder="Ex: 27"></p>
+            </div>
+            <div class="form-right">
+                <p>Phone: <input class="controls" type="number" id="phone" min='8' size="40" placeholder="Ex: 3414646165"></p>
+                <p>Adress: <input class="controls" type="text" id="adress" min='8' size="40" placeholder="Ex: Wheelright 1500"></p>
+                <p>City: <input class="controls" type="text" id="city" min='8' size="10" placeholder="Ex: Rosario"></p>
+                <p>Postal Code: <input class="controls" type="number" id="postalcode" min= '3' size="10" placeholder="Ex: 2000"></p>
+                <p>DNI: <input class="controls" type="number" id="dni" size="8" placeholder="Ex: 38470381"></p>
+            </div>
+        </div>
+        <div class="send-button">
+            <input type="submit" value="Send">
+        </div>
+      </form>
+</div>
+
+    <footer>
+        <p>Marie Curie News, Copyright &copy; 2020</p>  
+    </footer>
+    
+</body>
+
+</html>
