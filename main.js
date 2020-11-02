@@ -65,9 +65,13 @@ function emailValidation (e){
 
 password.addEventListener('blur', passwordValidation);
 
+var textOfPassword = '';
+
 function passwordValidation (e){
     
-    var textOfPassword = e.target.value;
+    textOfPassword = e.target.value;
+
+    console.log(textOfPassword);
 
     var letras="abcdefghyjklmnñopqrstuvwxyz";
 
@@ -111,11 +115,13 @@ function passwordValidation (e){
 
 password2.addEventListener('blur', password2Validation);
 
+var textOfPassword2 = '';
+
 function password2Validation (e){
     
-    var textOfPassword2 = e.target.value;
+    textOfPassword2 = e.target.value;
     
-    if (textOfPassword2.indexOf(' ')!=0 ){
+    if (textOfPassword2 != textOfPassword ){
         //console.log('index del arroba:' + textOfEmail.indexOf('@')),
         //console.log('index del espacio:' + textOfEmail.indexOf(' ')),
         //console.log('index del punto:' + textOfEmail.indexOf('.')),
@@ -130,7 +136,185 @@ function password2Validation (e){
     }
 }
 
+//ONBLUR - AGE VALIDATION
+
+age.addEventListener('blur', ageValidation);
+
+function ageValidation (e){
+    
+    var textOfAge = e.target.value;
+
+    if (textOfAge<18 ){
+        console.log(textOfAge);
+        var errorText = document.getElementById('ageError');
+        errorText.innerHTML = '<p> *Error </p>';
+
+    }
+    else{
+
+        var errorText = document.getElementById('ageError');
+        errorText.innerHTML = '<p>✔</p>';
+    }
+}
+
+//ONBLUR - PHONE VALIDATION
+
+phone.addEventListener('blur', phoneValidation);
+
+function phoneValidation (e){
+    
+    var textOfPhone = e.target.value;
+
+    if (textOfPhone.length<7 || textOfPassword.indexOf(' ')>=0  || textOfPassword.indexOf('-')>=0|| textOfPassword.indexOf(')')>=0 || textOfPassword.indexOf('(')>=0){
+        console.log(textOfPhone);
+        var errorText = document.getElementById('phoneError');
+        errorText.innerHTML = '<p> *Error </p>';
+
+    }
+    else{
+
+        var errorText = document.getElementById('phoneError');
+        errorText.innerHTML = '<p>✔</p>';
+    }
+}
+
+//ONBLUR - ADRESS VALIDATION
+
+adress.addEventListener('blur', adressValidation);
+
+var textOfAdress = '';
+
+function adressValidation (e){
+    
+    textOfAdress = e.target.value;
+
+    var letras="abcdefghyjklmnñopqrstuvwxyz";
+
+    function tiene_letras(textOfAdress){
+        textOfAdress = textOfAdress.toLowerCase();
+        for(i=0; i<textOfAdress.length; i++){
+            if (letras.indexOf(textOfAdress.charAt(i),0)!=-1){
+                return 1;
+            }
+        }
+        return 0;
+    }
+    
+    var numeros="1234567890";
+
+    function tiene_numeros(textOfAdress){
+        textOfAdress = textOfAdress.toLowerCase();
+        for(i=0; i<textOfAdress.length; i++){
+            if (numeros.indexOf(textOfAdress.charAt(i),0)!=-1){
+                return 1;
+            }
+        }
+        return 0;
+    }
+    if (textOfAdress.length<5 || textOfAdress.indexOf(' ')<0 || tiene_letras(textOfAdress)==0 || tiene_numeros(textOfAdress)==0 ){
+        console.log('texto que se forma' + textOfAdress),
+        console.log('index del espacio:' + textOfAdress.indexOf(' ')),
+        console.log('Tiene letras '+tiene_letras(textOfAdress));
+        console.log('Tiene numeros '+tiene_numeros(textOfAdress));
+        var errorText = document.getElementById('adressError');
+        errorText.innerHTML = '<p> *Error </p>';
+
+    }
+    else{
+        var errorText = document.getElementById('adressError');
+        errorText.innerHTML = '<p>✔</p>';
+    }
+}
+
+//ONBLUR - CITY VALIDATION
+
+city.addEventListener('blur', cityValidation);
+
+function cityValidation (e){
+    
+    var textOfCity = e.target.value;
+
+    if (textOfCity.length<3 ){
+        //console.log('lenght: '+textOfName.length),
+        //console.log('index del espacio:' + textOfName.indexOf(' '));
+        var errorText = document.getElementById('cityError');
+        errorText.innerHTML = '<p> *Error </p>';
+
+    }
+    else{
+
+        var errorText = document.getElementById('cityError');
+        errorText.innerHTML = '<p>✔</p>';
+    }
+}
+
+//ONBLUR - POSTALCODE VALIDATION
+
+postalCode.addEventListener('blur', postalCodeValidation);
+
+function postalCodeValidation (e){
+    
+    var textOfPostalCode = e.target.value;
+
+    if (textOfPostalCode.length<3 ){
+        //console.log('lenght: '+textOfPostalCode.length),
+        //console.log('index del espacio:' + textOfPostalCode.indexOf(' '));
+        var errorText = document.getElementById('postalCodeError');
+        errorText.innerHTML = '<p> *Error </p>';
+
+    }
+    else{
+
+        var errorText = document.getElementById('postalCodeError');
+        errorText.innerHTML = '<p>✔</p>';
+    }
+}
+
+//ONBLUR - DNI VALIDATION
+
+dni.addEventListener('blur', dniValidation);
+
+function dniValidation (e){
+    
+    var textOfDni = e.target.value;
+
+    if (textOfDni.length==8 || textOfDni.length==7 ){
+        //console.log('lenght: '+textOfDni.length),
+        //console.log('index del espacio:' + textOfDni.indexOf(' '));
+        var errorText = document.getElementById('dniError');
+        errorText.innerHTML = '<p> ✔ </p>';
+
+    }
+    else{
+
+        var errorText = document.getElementById('dniError');
+        errorText.innerHTML = '<p>*Error</p>';
+    }
+}
 
 
+/*----------------------------------*/
 
+//FOCUS - NAME VALIDATION
 
+fullName.addEventListener('focus', nameValidation);
+
+function nameValidation (e){
+    
+    var textOfName = e.target.value;
+    console.log('lenght: '+textOfName.length);
+/*
+    if (textOfName.length<6 || textOfName.indexOf(' ')<0 ){
+        console.log('lenght: '+textOfName.length),
+        console.log('index del espacio:' + textOfName.indexOf(' '));
+        var errorText = document.getElementById('nameError');
+        errorText.innerHTML = '<p> *Error </p>';
+
+    }
+    else{
+
+        var errorText = document.getElementById('nameError');
+        errorText.innerHTML = '<p>✔</p>';
+    }
+*/
+}
