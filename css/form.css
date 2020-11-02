@@ -67,3 +67,80 @@
     color: #333333;
     font-size: 15px;
 }
+
+.subscribe .form .form-left .password2{
+    display: flex;
+    flex-direction: row;
+}
+
+.subscribe .form .form-left .password2 #password2Error p{
+    font-family: Helvetica Neue;
+    color: #333333;
+    font-size: 15px;
+}
+
+.subscribe .form .form-left .age{
+    display: flex;
+    flex-direction: row;
+}
+
+.subscribe .form .form-left .age #age p{
+    font-family: Helvetica Neue;
+    color: #333333;
+    font-size: 15px;
+}
+
+.subscribe .form .form-right .phone{
+    display: flex;
+    flex-direction: row;
+}
+
+.subscribe .form .form-right .phone #phone p{
+    font-family: Helvetica Neue;
+    color: #333333;
+    font-size: 15px;
+}
+
+.subscribe .form .form-right .adress{
+    display: flex;
+    flex-direction: row;
+}
+
+.subscribe .form .form-right .adress #adress p{
+    font-family: Helvetica Neue;
+    color: #333333;
+    font-size: 15px;
+}
+
+.subscribe .form .form-right .city{
+    display: flex;
+    flex-direction: row;
+}
+
+.subscribe .form .form-right .city #city p{
+    font-family: Helvetica Neue;
+    color: #333333;
+    font-size: 15px;
+}
+
+.subscribe .form .form-right .postalCode{
+    display: flex;
+    flex-direction: row;
+}
+
+.subscribe .form .form-right .postalCode #postalCode p{
+    font-family: Helvetica Neue;
+    color: #333333;
+    font-size: 15px;
+}
+
+.subscribe .form .form-right .dni{
+    display: flex;
+    flex-direction: row;
+}
+
+.subscribe .form .form-right .dni #dni p{
+    font-family: Helvetica Neue;
+    color: #333333;
+    font-size: 15px;
+}
