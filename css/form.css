@@ -34,3 +34,36 @@
         align-items: center;
         justify-content: center;
     }
+
+.subscribe .form .form-left .name{
+    display: flex;
+    flex-direction: row;
+}
+
+.subscribe .form .form-left .name #nameError p{
+    font-family: Helvetica Neue;
+    color: #333333;
+    font-size: 15px;
+}
+
+.subscribe .form .form-left .email{
+    display: flex;
+    flex-direction: row;
+}
+
+.subscribe .form .form-left .email #emailError p{
+    font-family: Helvetica Neue;
+    color: #333333;
+    font-size: 15px;
+}
+
+.subscribe .form .form-left .password{
+    display: flex;
+    flex-direction: row;
+}
+
+.subscribe .form .form-left .password #passwordError p{
+    font-family: Helvetica Neue;
+    color: #333333;
+    font-size: 15px;
+}

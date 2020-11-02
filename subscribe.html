@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/form.css">
 
-    <script src="main.js"></script>
+    
 </head>
 
 <body>
@@ -23,7 +23,7 @@
             <div class="branding">
                 <button><img src="./img/hamburguesa.png"></button>
                 <h1><span class="highlight"><a href="index.html">Marie Curie </a></span>news</h1>
-                <button>Subscribe</button>
+                <button><a href = "index.html">Home</a></button>
             </div>
             <date>Tuesday, October 20, 2020 </date>
             <nav>
@@ -43,10 +43,19 @@
 <div class="subscribe">
     <form action="registro" method="get">
         <div class="form">
-            <div class=" form-left">
-                <p>Full name: <input class="controls" type="text" id="name" size="40" placeholder="Ex: Tia Toomey"></p>
-                <p>Email: <input class="controls" type="text" id="email" size="40" placeholder="Ex: tia.toomey@gmail.com"></p>
-                <p>Password: <input class="controls" type="password" id="password" size="12" placeholder="Password"></p>
+            <div class="form-left">
+                <div class = 'name'>
+                    <p>Full name: <input class="controls" type="text" id="name" size="40" placeholder="Ex: Tia Toomey"></p>
+                    <div id='nameError'><p></p></div>
+                </div>  
+                <div class = 'email'>
+                    <p>Email: <input class="controls" type="text" id="email" size="40" placeholder="Ex: tia.toomey@gmail.com"></p>
+                    <div id='emailError'><p></p></div>
+                </div>
+                <div class = 'password'>
+                    <p>Password: <input class="controls" type="password" id="password" size="12" placeholder="Password"></p>
+                    <div id='passwordError'><p></p></div>
+                </div>
                 <p>Repeate password: <input class="controls" type="password" id="password2" placeholder="Repeat Password"></p>
                 <p>Age: <input class="controls" type="number" id="age" min="18" placeholder="Ex: 27"></p>
             </div>
@@ -69,5 +78,5 @@
     </footer>
     
 </body>
-
+<script src="main.js"></script>
 </html>
