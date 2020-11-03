@@ -15,14 +15,18 @@ var city = document.getElementById('city');
 var postalCode = document.getElementById('postalCode');
 var dni = document.getElementById('dni');
 
+var submitButton = document.getElementById('submitButton');
+
 
 //ONBLUR - NAME VALIDATION
 
 fullName.addEventListener('blur', nameValidation);
 
+var textOfName = '';
+
 function nameValidation (e){
     
-    var textOfName = e.target.value;
+    textOfName = e.target.value;
 
     if (textOfName.length<6 || textOfName.indexOf(' ')<0 ){
         var errorText = document.getElementById('nameError');
@@ -34,8 +38,9 @@ function nameValidation (e){
         var errorText = document.getElementById('nameError');
         errorText.innerHTML = '<p>✔</p>';
     }
-}
 
+    return textOfName;
+}
 
 //FOCUS - NAME VALIDATION
 
@@ -44,11 +49,8 @@ fullName.addEventListener('focus', nameFValidation);
 function nameFValidation (e){
     
     var textOfNameF = e.target.value;
-    console.log('QUE HACE FOCUS: '+textOfNameF.length);
 
     if (textOfNameF.length<6 || textOfNameF.indexOf(' ')<0 ){
-        console.log('lenght: '+textOfNameF.length),
-        console.log('index del espacio:' + textOfNameF.indexOf(' '));
         var errorText = document.getElementById('nameError');
         errorText.innerHTML = '<p>  </p>';
     }
@@ -64,9 +66,11 @@ function nameFValidation (e){
 
 email.addEventListener('blur', emailValidation);
 
+var textOfEmail = '';
+
 function emailValidation (e){
     
-    var textOfEmail = e.target.value;
+    textOfEmail = e.target.value;
 
     if (textOfEmail.indexOf(' ')>0 || textOfEmail.indexOf('@')<0 || textOfEmail.indexOf('.')<0 || textOfEmail.indexOf('.') == (textOfEmail.length-1) ){
         var errorText = document.getElementById('emailError');
@@ -108,8 +112,6 @@ var textOfPassword = '';
 function passwordValidation (e){
     
     textOfPassword = e.target.value;
-
-    console.log(textOfPassword);
 
     var letras="abcdefghyjklmnñopqrstuvwxyz";
 
@@ -154,8 +156,6 @@ var textOfPassword = '';
 function passwordValidationF (e){
     
     textOfPassword = e.target.value;
-
-    console.log(textOfPassword);
 
     var letras="abcdefghyjklmnñopqrstuvwxyz";
 
@@ -202,10 +202,6 @@ function password2Validation (e){
     textOfPassword2 = e.target.value;
     
     if (textOfPassword2 != textOfPassword ){
-        //console.log('index del arroba:' + textOfEmail.indexOf('@')),
-        //console.log('index del espacio:' + textOfEmail.indexOf(' ')),
-        //console.log('index del punto:' + textOfEmail.indexOf('.')),
-        //console.log('error');
         var errorText = document.getElementById('password2Error');
         errorText.innerHTML = '<p> *Error </p>';
 
@@ -236,6 +232,7 @@ function password2ValidationF (e){
         errorText.innerHTML = '<p> </p>';
     }
 }
+
 //ONBLUR - AGE VALIDATION
 
 age.addEventListener('blur', ageValidation);
@@ -353,10 +350,6 @@ function adressValidation (e){
         return 0;
     }
     if (textOfAdress.length<5 || textOfAdress.indexOf(' ')<0 || tiene_letras(textOfAdress)==0 || tiene_numeros(textOfAdress)==0 ){
-        console.log('texto que se forma' + textOfAdress),
-        console.log('index del espacio:' + textOfAdress.indexOf(' ')),
-        console.log('Tiene letras '+tiene_letras(textOfAdress));
-        console.log('Tiene numeros '+tiene_numeros(textOfAdress));
         var errorText = document.getElementById('adressError');
         errorText.innerHTML = '<p> *Error </p>';
 
@@ -401,10 +394,6 @@ function adressValidationF (e){
         return 0;
     }
     if (textOfAdress.length<5 || textOfAdress.indexOf(' ')<0 || tiene_letras(textOfAdress)==0 || tiene_numeros(textOfAdress)==0 ){
-        console.log('texto que se forma' + textOfAdress),
-        console.log('index del espacio:' + textOfAdress.indexOf(' ')),
-        console.log('Tiene letras '+tiene_letras(textOfAdress));
-        console.log('Tiene numeros '+tiene_numeros(textOfAdress));
         var errorText = document.getElementById('adressError');
         errorText.innerHTML = '<p> </p>';
 
@@ -501,10 +490,8 @@ function dniValidation (e){
     var textOfDni = e.target.value;
 
     if (textOfDni.length==8 || textOfDni.length==7 ){
-        //console.log('lenght: '+textOfDni.length),
-        //console.log('index del espacio:' + textOfDni.indexOf(' '));
         var errorText = document.getElementById('dniError');
-        errorText.innerHTML = '<p> ✔ </p>';
+        errorText.innerHTML = '<p>✔</p>';
 
     }
     else{
@@ -523,8 +510,6 @@ function dniValidationF (e){
     var textOfDni = e.target.value;
 
     if (textOfDni.length==8 || textOfDni.length==7 ){
-        //console.log('lenght: '+textOfDni.length),
-        //console.log('index del espacio:' + textOfDni.indexOf(' '));
         var errorText = document.getElementById('dniError');
         errorText.innerHTML = '<p> </p>';
 
@@ -535,6 +520,74 @@ function dniValidationF (e){
         errorText.innerHTML = '<p> </p>';
     }
 }
+
+
+//FORM SUBMIT EVENT
+
+submitButton.addEventListener('click', showInfo);
+
+function showInfo (e){
+    e.preventDefault();
+
+    //get input value
+    var fullName2 = document.getElementById('name').value;
+    var email2 = document.getElementById('email').value;
+    var age2 = document.getElementById('age').value;
+    var phone2 = document.getElementById('phone').value;
+    var adress2 = document.getElementById('adress').value;
+    var city2 = document.getElementById('city').value;
+    var postalCode2 = document.getElementById('postalCode').value;
+    var dni2 = document.getElementById('dni').value;
+    
+
+    var info = 'Full Name: ' + fullName2 + '\n' +
+                'Email: ' + email2 + '\n' +
+                'Password: OK' + '\n' +
+                'Age: ' + age2 + '\n' +
+                'Phone Number: ' + phone2 + '\n' +
+                'Adress: ' + adress2 + '\n' +
+                'City: '+ city2 + '\n' +
+                'Postal Code: ' + postalCode2 + '\n' +
+                'DNI: ' + dni2 + '\n' 
+
+    var info2 = 'CORRECT PERSONAL DATA';
+
+    //get errors
+    var errorText1 = document.getElementById('nameError');
+    var errorText2 = document.getElementById('emailError');
+    var errorText3 = document.getElementById('ageError');
+    var errorText4 = document.getElementById('phoneError');
+    var errorText5 = document.getElementById('adressError');
+    var errorText6 = document.getElementById('cityError');
+    var errorText7 = document.getElementById('postalCodeError');
+    var errorText8 = document.getElementById('dniError');
+    var errorText9 = document.getElementById('passwordError');
+    var errorText10 = document.getElementById('password2Error');
+
+    //Show message if all the errors show the tic
+    if( errorText1.innerHTML == '<p>✔</p>' &&
+        errorText2.innerHTML == '<p>✔</p>' &&
+        errorText3.innerHTML == '<p>✔</p>' &&
+        errorText4.innerHTML == '<p>✔</p>' &&
+        errorText5.innerHTML == '<p>✔</p>' &&
+        errorText6.innerHTML == '<p>✔</p>' &&
+        errorText7.innerHTML == '<p>✔</p>' &&
+        errorText8.innerHTML == '<p>✔</p>' &&
+        errorText9.innerHTML == '<p>✔</p>' &&
+        errorText10.innerHTML == '<p>✔</p>'
+        )
+     
+    {
+        alert(info);
+    }
+
+    else{
+        alert(info2);
+    }
+    
+}
+
+
 
 
 
